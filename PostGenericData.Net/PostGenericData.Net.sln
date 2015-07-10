@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGenericData.Net", "PostGenericData.Net.csproj", "{ADD624B8-5833-41F0-8298-8BEADC09DC65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPostGenericData.Net", "..\TestPostGenericData.Net\TestPostGenericData.Net.csproj", "{7241C0AD-0BE6-44AE-B22E-AA47DEC780DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADD624B8-5833-41F0-8298-8BEADC09DC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD624B8-5833-41F0-8298-8BEADC09DC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD624B8-5833-41F0-8298-8BEADC09DC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD624B8-5833-41F0-8298-8BEADC09DC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7241C0AD-0BE6-44AE-B22E-AA47DEC780DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7241C0AD-0BE6-44AE-B22E-AA47DEC780DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7241C0AD-0BE6-44AE-B22E-AA47DEC780DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7241C0AD-0BE6-44AE-B22E-AA47DEC780DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
