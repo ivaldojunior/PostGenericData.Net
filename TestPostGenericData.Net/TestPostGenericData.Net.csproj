@@ -53,6 +53,12 @@
     <Compile Include="TestPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PostGenericData.Net\PostGenericData.Net.csproj">
+      <Project>{add624b8-5833-41f0-8298-8beadc09dc65}</Project>
+      <Name>PostGenericData.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -9,19 +9,40 @@ namespace PostGenericData.Net
 {
     public class PostGenericClass
     {
+        string _URI { get; set; }
 
-        public void Post()
+        public PostGenericClass(string URI)
         {
-            string URI = "http://localhost:10108";
-            string myParameters = "param1=value1&param2=value2&param3=value3";
+            _URI = URI;
+        }
+
+        public void Post<T>(object obj,ref string resul)
+        {
+            if (obj == null)
+                return;
+
+            var prop = obj.GetType().GetProperties();
+
+            string param = "soft=postgenericClass.net";
+
+            for (int i = 0; i < prop.Count(); i++)
+            {
+                param += "&" + prop[i].Name + "=" + GetPropValue(obj, prop[i].Name);
+            }
 
             using (WebClient wc = new WebClient())
             {
                 wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-                string HtmlResult = wc.UploadString(URI, myParameters);
-                HtmlResult = HtmlResult.Replace(System.Environment.NewLine, string.Empty).Trim();
+                resul = wc.UploadString(_URI, param);
+                
             }
 
         }
+
+        private static object GetPropValue(object src, string propName)
+        {
+            return src.GetType().GetProperty(propName).GetValue(src, null);
+        }
+
     }
 }
