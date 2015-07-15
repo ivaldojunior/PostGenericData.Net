@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -65,48 +64,6 @@ namespace PostGenericData.Net
 
         }
 
-        public void PostJson<T>(object obj, ref string resul)
-        {
-            if (obj == null)
-                return;
-
-            var json = JsonConvert.SerializeObject(obj);
-
-            using (WebClient wc = new WebClient())
-            {
-                wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-                resul = wc.UploadString(_URI, "POST", json);
-            }
-       }
-
-        public void PostJsonAsync<T>(object obj)
-        {
-            if (obj == null)
-                return;
-
-            var json = JsonConvert.SerializeObject(obj);
-            using (WebClient wc = new WebClient())
-            {
-                wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-                Uri u = new Uri(_URI);
-                wc.UploadStringAsync(u, "POST", json);
-            }
-        }
-
-        public void PostJsonAndGetObject<T>(object obj, ref T resul)
-        {
-            if (obj == null)
-                return;
-
-            var json = JsonConvert.SerializeObject(obj);
-            using (WebClient wc = new WebClient())
-            {
-                wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-                var resul_tmp = wc.UploadString(_URI, "POST", json);
-                resul = JsonConvert.DeserializeObject<T>(resul_tmp);
-            }
-
-        }
-
+  
     }
 }
