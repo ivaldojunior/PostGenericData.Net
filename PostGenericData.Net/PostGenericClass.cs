@@ -38,6 +38,7 @@ namespace PostGenericData.Net
             using (WebClient wc = new WebClient())
             {
                 wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
+                wc.Encoding = System.Text.Encoding.UTF8;
                 resul = wc.UploadString(_URI, param);
                 
             }
@@ -58,6 +59,7 @@ namespace PostGenericData.Net
             using (WebClient wc = new WebClient())
             {
                 Uri u = new Uri(_URI);
+                wc.Encoding = System.Text.Encoding.UTF8;
                 wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
                 wc.UploadStringAsync(u, param);
             }
