@@ -31,16 +31,7 @@ namespace TestPostGenericData.Net
  
         }
 
-        [TestMethod]
-        public void TestJson1()
-        {
-            Example c = new Example() { name = "Jack", age = 26 };
-            PostGenericClass p = new PostGenericClass(uri);
-            string resul = string.Empty;
-            p.PostJson<Example>(c, ref resul);
-            resul = resul.Replace(System.Environment.NewLine, string.Empty).Trim();
-        }
-
+   
 
     }
 
